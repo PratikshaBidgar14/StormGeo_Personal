@@ -1,0 +1,114 @@
+Name,Script ID,Script Type,Owner,Inactive,Owner Changed,,
+SAT MR Order Processing Testing,CUSTOMSCRIPT_SAT_MR_ORDER_PROCESSING_TES,Map/Reduce,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT | MR | Validate Order Sync V2,CUSTOMSCRIPT_SAT_MR_VALIDATE_ORDER_SYNC_,Map/Reduce,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT | SL | Customer Search Update,CUSTOMSCRIPT_SAT_SL_CUST_SEARCH_UPDATER,Suitelet,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT | UE | Invoice Pdf Line Id Setter,CUSTOMSCRIPT_SAT_UE_INV_PDF_LINE_ID_SET,User Event,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT | UE | Set Last Modified DateTime,CUSTOMSCRIPT_SAT_UE_SET_LAST_MODIFY_DATE,User Event,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT | Update status updation checkbox,CUSTOMSCRIPT_UPDATE_SUBSCRIPTION_CHECKBO,User Event,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT | WFA21 | INV Sync back to SF,CUSTOMSCRIPT_SAT_WFA21_TRIGGER_INTEGRATI,Workflow Action,Sourabh Vaidya,No,Provisioning Account,,
+SAT|SC21|Inactive Billing Accounts,CUSTOMSCRIPT_INACTIVE_BILLING_ACCOUNTS,Scheduled,Sourabh Vaidya,Yes,Provisioning Account,,
+SAT|UE21|Update Credit Memo Date,CUSTOMSCRIPT_UPDATE_CREDIT_MEMO_DATE,User Event,Sourabh Vaidya,No,Provisioning Account,,
+SAT|UE21|Update Exchange Rate on Product,CUSTOMSCRIPT_UPDATE_EXCHANGE_RATE,User Event,Sourabh Vaidya,No,Provisioning Account,,
+SAT | SL | Usage Status Updation,customscript_sat_sl_usage_status_updatio,Suitelet,Pratiksha Bidgar,Yes,Provisioning Account,,
+SAT | UE | Custom Usage record creation,customscript_sat_usage_updated,User Event,Pratiksha Bidgar,Yes,Provisioning Account,,
+SAT MR Update Invoice Records,customscript_sat_mr_update_inv_records,Map/Reduce,Shiv Shankar,No,Provisioning Account,,
+SAT SS21 Generate Price Book,customscript_sat_sh_generatepricebook,Scheduled,Shiv Shankar,No,Provisioning Account,,
+SAT | RL | Cust Pay Celigo Flow Trigger,customscript_sat_rl_celigo_flow_trigger,Restlet,Shiv Shankar,No,Provisioning Account,,
+SAT | SL | Large Invoice PDF Print,customscript_sat_sl_invoice_pdf_print,Suitelet,Shiv Shankar,No,Provisioning Account,,
+SAT | SS | Update Invoice Record,customscript_sat_ss_update_inv_rec_1,Scheduled,Shiv Shankar,Yes,Provisioning Account,,
+SAT | Tax Line Remove,customscript_tax_line_remove,Map/Reduce,Shiv Shankar,Yes,Provisioning Account,,
+SAT | UE | Credit Memo Calculation v 1.0,customscript_sat_ue_credit_memo_calc_v1,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT | UE | Credit Memo Calculations,customscript_credit_memo_calculations,User Event,Shiv Shankar,Yes,Provisioning Account,,
+SAT | UE | Cust Payment Celigo Trigger,customscript_sat_ue_celigo_trigger,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT | UE | Invoice PDF & Line ID Setter,CUSTOMSCRIPT_SAT_UE_INV_PRINT_LINE_ID,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT | UE | Set Credit Memo Values,CUSTOMSCRIPT_SET_CREDIT_MEMO_VALUES,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT |UE|Add Default Subscription,CUSTOMSCRIPT_ADD_DEFAULT_SUBSCRIPTION,User Event,Shiv Shankar,Yes,Provisioning Account,,
+SAT_MR_Terminiate_Subscriptions,CUSTOMSCRIPT_TERMINIATE_SUBSCRIPTIONS,Map/Reduce,Shiv Shankar,No,Provisioning Account,,
+SAT_MR_Update_Order_Product_Amended.js,CUSTOMSCRIPT_UPDATE_ORDER_PRODUCT_AMEND,Map/Reduce,Shiv Shankar,No,Provisioning Account,,
+SAT| MR | Order Processing,CUSTOMSCRIPTCUSTOMSCRIPT_RM_MR_ORDERPROC,Map/Reduce,Shiv Shankar,No,Provisioning Account,,
+SAT| SS | Set Values On Invoice Usage OC,CUSTOMSCRIPT_SAT_SS_SET_VALUES_ON_INV,Scheduled,Shiv Shankar,No,Provisioning Account,,
+SAT|CL21|Add Customer Subsidiary,CUSTOMSCRIPT_CL21_ADD_CUSTOMER_SUB,Client,Shiv Shankar,No,Provisioning Account,,
+SAT|CL21|Cancel Button,CUSTOMSCRIPT_SAT_CL21_CANCEL_BUTTON,Client,Shiv Shankar,No,Provisioning Account,,
+SAT|MR|ActivateSubscription,CUSTOMSCRIPT1766,Map/Reduce,Shiv Shankar,No,Provisioning Account,,
+SAT|MR|ValidateOrderSync,CUSTOMSCRIPT_VALIDATEORDER,Map/Reduce,Shiv Shankar,No,Provisioning Account,,
+SAT|SL|Print Invoice PDF,CUSTOMSCRIPT_SL_PRINT_INVOICE_PDF,Suitelet,Shiv Shankar,No,Provisioning Account,,
+SAT|SS|TimeFunction,CUSTOMSCRIPT1768,Scheduled,Shiv Shankar,No,Provisioning Account,,
+SAT|SUT21|JE Rejection Reason,CUSTOMSCRIPT_SAT_JE_REJECTION_REASON,Suitelet,Shiv Shankar,No,Provisioning Account,,
+SAT|SUT21|VB Rejection Reason,CUSTOMSCRIPT_SAT_SUT21_VB_REJECT_REASON,Suitelet,Shiv Shankar,No,Provisioning Account,,
+SAT|UE21|Add Subsidiaries & Currencies,CUSTOMSCRIPT_ADD_SUBSIDIARIES_CURRENCIES,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT|UE|Add Order & Order product id INV,CUSTOMSCRIPT_ADD_ORDER_ORDERPRODUCT_ID,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT|UE|CallScheduledScript,CUSTOMSCRIPT_CALLSCHEDULEDSCRIPT,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT|UE|Create Invoice PDF Link for SF,CUSTOMSCRIPT_CREATE_INVOICE_PDF_LINK,User Event,Shiv Shankar,Yes,Provisioning Account,,
+SAT|UE|Item Line ID,CUSTOMSCRIPT_ITEM_LINE_ID,User Event,Shiv Shankar,Yes,Provisioning Account,,
+SAT|UE|Set Billed unit and amount,CUSTOMSCRIPT_SET_BILLED_UNIT_AND_AMOUNT,User Event,Shiv Shankar,Yes,Provisioning Account,,
+SAT|UE|Set Emails On Invoice,CUSTOMSCRIPT_SAT_UE_SET_EMAILS_INVOICE,User Event,Shiv Shankar,No,Provisioning Account,,
+SAT|WA|Send Emails To Multiple Users,CUSTOMSCRIPT_SAT_SEND_EMAIL_MULTIPLEUSER,Workflow Action,Shiv Shankar,No,Provisioning Account,,
+SAT|WFA21|Call Suitelet From JE,CUSTOMSCRIPTSAT_WFA21_CALL_SUITELET_FROM,Workflow Action,Shiv Shankar,No,Provisioning Account,,
+SAT|WFA21|Call Suitelet From VB,CUSTOMSCRIPT_SAT_WFA21_CALL_SUITELET,Workflow Action,Shiv Shankar,No,Provisioning Account,,
+SBE Bundle Install,customscript_sbe_bundle_install,Bundle Installation,Shiv Shankar,No,Provisioning Account,,
+SAT|Delete test transaction,customscript1625,Map/Reduce,Yash Modale,No,Provisioning Account,,
+SAT|UE|Resubmit JE For Aprroval,CUSTOMSCRIPT_RESUBMIT_JE_FOR_APPROVAL,User Event,Pratham Singh,No,Provisioning Account,,
+SAT|WA|Send Email To Customer,CUSTOMSCRIPT_SEND_MAIL_TO_CUSTOMER,Workflow Action,Pratham Singh,No,Provisioning Account,,
+ACH EP Migration MR - CA,CUSTOMSCRIPT_CA_ACH_EP_MIGRATION_MR,Map/Reduce,Ratio Management,No,Provisioning Account,,
+Change TranId Display,CUSTOMSCRIPT1072,User Event,Ratio Management,No,Provisioning Account,,
+field_script,CUSTOMSCRIPT996,Client,Ratio Management,No,Provisioning Account,,
+RM | UE | Update Description on Sub,CUSTOMSCRIPT_RM_UE_UPDATE_DESCRIPTION,User Event,Ratio Management,No,Provisioning Account,,
+RM | MR | Order Processing,CUSTOMSCRIPT_RM_MR_ORDERPROCESSING,Map/Reduce,Rakesh Kanaki,Yes,Provisioning Account,,
+RM | UE | Invoice Line Bundle Changes,CUSTOMSCRIPT_RM_UE_INVOICE_BUNDLE_CHANGE,User Event,Rakesh Kanaki,Yes,Provisioning Account,,
+rm_mr_ActivateSubscription,CUSTOMSCRIPT_RM_MR_ACTIVATESUBSCRIPTION,Map/Reduce,Rakesh Kanaki,Yes,Provisioning Account,,
+rm_mr_currency_update_to_customers,CUSTOMSCRIPT_RM_MR_CURRENCY_UPDATE_TO_CU,Map/Reduce,Rakesh Kanaki,No,Provisioning Account,,
+rm_sh_generatepricebook,CUSTOMSCRIPT_RM_SH_GENERATEPRICEBOOK,Scheduled,Rakesh Kanaki,Yes,Provisioning Account,,
+rm_sh_subscriptionchangetracking,CUSTOMSCRIPT_RM_SH_SUBSCRIPTIONCHANGETRA,Scheduled,Rakesh Kanaki,Yes,Provisioning Account,,
+RM|MR|Validate order sync record,CUSTOMSCRIPT_RM_MR_VALIDATEORDERSYNC,Map/Reduce,Rakesh Kanaki,Yes,Provisioning Account,,
+SAT |UE|Generate Subscription Plan,CUSTOMSCRIPT_RM_UE_GENERATESUBSCRIPTIONP,User Event,Rakesh Kanaki,No,Provisioning Account,,
+UE | RM | Set Values at Invoice,CUSTOMSCRIPT_UE_RM_SET_VALUES_INVOICE,User Event,Rakesh Kanaki,No,Provisioning Account,,
+UE | RM | Set Values at Revenue Arngment,CUSTOMSCRIPT_UE_RM_SET_VAL_REV_ARNGMENT,User Event,Rakesh Kanaki,No,Provisioning Account,,
+,,,,,,,
+,,,,,,,
+,Workflows,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+Name,Record Type,Sub Record Type,Description,Owner,Run as Admin,Release Status,Owner Changed
+SAT|Workflow|Dunning Email Schedular,Transaction,Invoice,,Kailas  Garje,Yes,Released,Provisioning Account
+Guided Dunning Customer WF Scheduler,Customer,Customer,,Kailas  Garje,No,Not Initiating,Provisioning Account
+SAT|Workflow|Pause Dunning,Transaction,Invoice,,Yash Modale,Yes,Released,Provisioning Account
+ SAT|Workflow|Vendor Bill Payment JE,Transaction,Vendor Payment,,Yash Modale,Yes,Released,Provisioning Account
+SAT | Invoice Approval Workflow,Transaction,Invoice,,Shiv Shankar,Yes,Released,Provisioning Account
+SAT | Workflow | Journal Entry Approval,Transaction,Journal Entry,,Shiv Shankar,Yes,Released,Provisioning Account
+SAT|Workflow|Journal Entry Error,Transaction,Journal Entry,,Shiv Shankar,Yes,Released,Provisioning Account
+SAT|Workflow|System Generated JE,Transaction,Journal Entry,,Shiv Shankar,Yes,Released,Provisioning Account
+SAT|Workflow|Vendor Bill StormGeo ,Transaction,Vendor Bill,,Shiv Shankar,Yes,Released,Provisioning Account
+SAT|Workflow|Credit Note,Transaction,Credit Memo,,Pratham Singh,Yes,Released,Provisioning Account
+SAT | Trigger Integration,Transaction,Customer Payment,,Pratham Singh,Yes,Released,Provisioning Account
+SAT | Trigger Integration,Transaction,Credit Memo,,Pratham Singh,Yes,Released,Provisioning Account
+RM Invoice Approval,Transaction,Invoice,,Rakesh Kanaki,Yes,Released,Provisioning Account
+RM Rejected JE Update,Transaction,Journal Entry,,Andy Deshpande,Yes,Suspended,Provisioning Account
+RM-Journal Approval,Transaction,Journal Entry,"Approval process for Journal entry, lock the record once approved",Andy Deshpande,Yes,Not Initiating,Provisioning Account
+RM-PO-VB Approval,Transaction,Purchase Order,Approval Process on Purchase order & vendor Bill,Andy Deshpande,Yes,Not Initiating,Provisioning Account
+RM-PO-VB Approval,Transaction,Vendor Bill,Approval Process on Purchase order & vendor Bill,Andy Deshpande,Yes,Not Initiating,Provisioning Account
+RM-PO-VB Approval Extension,Transaction,Purchase Order,"Approval Process on Purchase order & vendor Bill extended to Dubai, ASIA & USA",Andy Deshpande,Yes,Released,Provisioning Account
+RM-PO-VB Approval Extension,Transaction,Vendor Bill,"Approval Process on Purchase order & vendor Bill extended to Dubai, ASIA & USA",Andy Deshpande,Yes,Released,Provisioning Account
+RM_PO_VB_Rejected,Transaction,Purchase Order,This flow resubmits the order to approval on edit.,Andy Deshpande,Yes,Suspended,Provisioning Account
+RM_PO_VB_Rejected,Transaction,Vendor Bill,This flow resubmits the order to approval on edit.,Andy Deshpande,Yes,Suspended,Provisioning Account
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,Saved Searches,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+Title,ID,Type,Owner,Access,Last Run By,Last Run On,Owner Changed
+Orders Products Sync. Search****PLEASE DON'T DELETE******,customsearch_celigo_ops_subscription_sea,Orders Products Sync.,Pratiksha Bidgar,Public,Pratiksha Bidgar,10-11-2025 06:27,Provisioning Account
+Subscription Line Search****PLEASE DON'T DELETE****,customsearch_celigo_sl_search,Subscription Line,Pratiksha Bidgar,Public,Pratiksha Bidgar,10-11-2025 06:27,Provisioning Account
+[Celigo] | SAT | Usage Record Status Update Search,customsearch_celigo_sat_usage_record_sta,SAT | Dummy Usage Record,Pratiksha Bidgar,Public,Pratiksha Bidgar,10-11-2025 06:35,Provisioning Account
+[Celigo] Subscription Update,customsearch_celigo_subscription_update,Orders Products Sync.,Pratiksha Bidgar,Public,Pratiksha Bidgar,10-11-2025 05:37,Provisioning Account

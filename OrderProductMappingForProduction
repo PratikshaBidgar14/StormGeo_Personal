@@ -1,0 +1,449 @@
+{
+  "_id": "67f8e852f1240f0a4a7e79e0",
+  "createdAt": "2025-04-11T10:00:50.803Z",
+  "lastModified": "2025-06-24T11:34:15.891Z",
+  "name": "Create Order Product",
+  "_connectionId": "63e228535044915a0bb46ee0",
+  "_sourceId": "67b5cb67a1825a20cbe9ae9c",
+  "distributed": true,
+  "apiIdentifier": "i7a70ee8bb",
+  "hooks": {
+    "preMap": {
+      "function": "preMap",
+      "_scriptId": "67f8e84ef1240f0a4a7e79aa"
+    }
+  },
+  "ignoreExisting": false,
+  "ignoreMissing": false,
+  "oneToMany": true,
+  "pathToMany": "OrderItems",
+  "sandbox": false,
+  "lookups": [
+    {
+      "name": "salesforce_chargetype",
+      "map": {
+        "One-Time": 1,
+        "Recurring": 2,
+        "Usage": 3
+      },
+      "default": "",
+      "allowFailures": true
+    },
+    {
+      "recordType": "customrecord_rm_applicationcode",
+      "expression": "[\"externalid\",\"is\",\"{{{Application_Code__c}}}\"]",
+      "resultField": "internalid",
+      "name": "netsuite_applicationcode",
+      "default": "",
+      "allowFailures": true
+    },
+    {
+      "recordType": "customrecord_rm_sf_vessel",
+      "expression": "[[\"isinactive\",\"is\",\"false\"],\"AND\",[\"externalid\",\"is\",\"{{Vessel__c}}\"]]",
+      "resultField": "internalid",
+      "name": "_getvesselid",
+      "default": "",
+      "allowFailures": true
+    },
+    {
+      "recordType": "customrecord_rm_sf_vessel",
+      "expression": "[[\"isinactive\",\"is\",\"false\"],\"AND\",[\"externalid\",\"is\",\"{{Vessel__c}}\"]]",
+      "resultField": "name",
+      "name": "_getvesselname",
+      "allowFailures": false
+    },
+    {
+      "name": "billingFrequency",
+      "map": {
+        "Monthly": 1,
+        "Annual": 4,
+        "Quarterly": 2,
+        "Semiannual": 3
+      },
+      "default": "",
+      "allowFailures": true
+    },
+    {
+      "name": "salesforce_unitsmapping",
+      "map": {
+        "Hour": 1,
+        "Course": 12,
+        "Day": 7,
+        "Forecast": 13,
+        "Half Yearly": 5,
+        "License": 11,
+        "Month": 2,
+        "Month - daily rate": 3,
+        "Pcs": 8,
+        "Quarter": 4,
+        "Update": 9,
+        "Vessel": 10,
+        "Year": 6
+      },
+      "default": "",
+      "allowFailures": true
+    }
+  ],
+  "netsuite_da": {
+    "useSS2Restlets": false,
+    "restletVersion": "suitebundle",
+    "operation": "addupdate",
+    "recordType": "customrecord_rm_ordersproductssync",
+    "internalIdLookup": {
+      "expression": "[\"externalid\",\"is\",\"{{{Id}}}\"]"
+    },
+    "lookups": [
+      {
+        "name": "salesforce_chargetype",
+        "map": {
+          "One-Time": 1,
+          "Recurring": 2,
+          "Usage": 3
+        },
+        "default": "",
+        "allowFailures": true
+      },
+      {
+        "name": "netsuite_applicationcode",
+        "default": "",
+        "recordType": "customrecord_rm_applicationcode",
+        "expression": "[\"externalid\",\"is\",\"{{{Application_Code__c}}}\"]",
+        "resultField": "internalid",
+        "allowFailures": true
+      },
+      {
+        "name": "_getvesselid",
+        "default": "",
+        "recordType": "customrecord_rm_sf_vessel",
+        "expression": "[[\"isinactive\",\"is\",\"false\"],\"AND\",[\"externalid\",\"is\",\"{{Vessel__c}}\"]]",
+        "resultField": "internalid",
+        "allowFailures": true
+      },
+      {
+        "name": "_getvesselname",
+        "recordType": "customrecord_rm_sf_vessel",
+        "expression": "[[\"isinactive\",\"is\",\"false\"],\"AND\",[\"externalid\",\"is\",\"{{Vessel__c}}\"]]",
+        "resultField": "name",
+        "allowFailures": false
+      },
+      {
+        "name": "billingFrequency",
+        "map": {
+          "Monthly": 1,
+          "Annual": 4,
+          "Quarterly": 2,
+          "Semiannual": 3
+        },
+        "default": "",
+        "allowFailures": true
+      },
+      {
+        "name": "salesforce_unitsmapping",
+        "map": {
+          "Hour": 1,
+          "Course": 12,
+          "Day": 7,
+          "Forecast": 13,
+          "Half Yearly": 5,
+          "License": 11,
+          "Month": 2,
+          "Month - daily rate": 3,
+          "Pcs": 8,
+          "Quarter": 4,
+          "Update": 9,
+          "Vessel": 10,
+          "Year": 6
+        },
+        "default": "",
+        "allowFailures": true
+      }
+    ],
+    "mapping": {
+      "fields": [
+        {
+          "extract": "_PARENT.NetsuiteId",
+          "generate": "custrecord_rm_os_op_parent",
+          "internalId": true
+        },
+        {
+          "extract": "Billing_Account__r.Name",
+          "generate": "custrecord_rm_op_billingaccount",
+          "internalId": false
+        },
+        {
+          "extract": "Line_Description__c",
+          "generate": "custrecord_rm_op_linedesc",
+          "internalId": false
+        },
+        {
+          "extract": "Item_Number__c",
+          "generate": "custrecord_rm_op_itemnumber",
+          "internalId": false
+        },
+        {
+          "extract": "Id",
+          "generate": "externalid",
+          "internalId": false
+        },
+        {
+          "extract": "Vessel_IMO_Number__c",
+          "generate": "custrecord_rm_op_vesselimo",
+          "internalId": false
+        },
+        {
+          "extract": "OrderItemNumber",
+          "generate": "custrecord_rm_op_opnumber",
+          "internalId": false
+        },
+        {
+          "extract": "_PARENT.OrderNumber",
+          "generate": "custrecord_rm_op_order",
+          "internalId": false
+        },
+        {
+          "extract": "Product_Name__c",
+          "generate": "custrecord_rm_op_product",
+          "internalId": false
+        },
+        {
+          "extract": "Quantity",
+          "generate": "custrecord_rm_op_quantity",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__UnproratedNetPrice__c",
+          "generate": "custrecord_rm_op_unitprice",
+          "internalId": false
+        },
+        {
+          "extract": "Unit__c",
+          "generate": "custrecord_rm_op_unit",
+          "immutable": false,
+          "lookupName": "salesforce_unitsmapping",
+          "internalId": true,
+          "discardIfEmpty": false
+        },
+        {
+          "extract": "SBQQ__ContractAction__c",
+          "generate": "custrecord_rm_op_contractaction",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__ChargeType__c",
+          "generate": "custrecord_rm_op_chargetype",
+          "immutable": false,
+          "lookupName": "salesforce_chargetype",
+          "internalId": true,
+          "discardIfEmpty": false
+        },
+        {
+          "extract": "_PARENT.Billing_Type__c",
+          "generate": "custrecord_rm_op_billingtype",
+          "immutable": false,
+          "internalId": true,
+          "discardIfEmpty": false
+        },
+        {
+          "extract": "{{invoiceGroupId_new}}",
+          "generate": "custrecord_rm_op_invoicegroupid",
+          "internalId": false
+        },
+        {
+          "extract": "Invoice_Group__c",
+          "generate": "custrecord_rm_op_invoicegroup",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__BillingFrequency__c",
+          "generate": "custrecord_rm_op_billingfreq",
+          "immutable": false,
+          "internalId": false,
+          "discardIfEmpty": true
+        },
+        {
+          "extract": "ServiceDate",
+          "extractDateFormat": "YYYY-MM-DD",
+          "generate": "custrecord_rm_op_startdate",
+          "immutable": false,
+          "internalId": false,
+          "discardIfEmpty": true
+        },
+        {
+          "extract": "EndDate",
+          "extractDateFormat": "YYYY-MM-DD",
+          "generate": "custrecord_rm_op_enddate",
+          "immutable": false,
+          "internalId": false,
+          "discardIfEmpty": true
+        },
+        {
+          "extract": "SBQQ__Subscription__c",
+          "generate": "custrecord_rm_op_subscription",
+          "internalId": false
+        },
+        {
+          "extract": "Application_Code__c",
+          "generate": "custrecord_rm_op_applicationcode",
+          "immutable": false,
+          "lookupName": "netsuite_applicationcode",
+          "internalId": true,
+          "discardIfEmpty": false
+        },
+        {
+          "extract": "Income__c",
+          "generate": "custrecord_rm_op_income",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__Contract__r.ContractNumber",
+          "generate": "custrecord_rm_op_contract",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__ProrateMultiplier__c",
+          "generate": "custrecord_rm_op_proratemultiplier",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__SubscriptionTerm__c",
+          "generate": "custrecord_rm_op_subscriptionterm",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__TerminatedDate__c",
+          "extractDateFormat": "YYYY-MM-DD",
+          "generate": "custrecord_rm_op_terminateddate",
+          "immutable": false,
+          "internalId": false,
+          "discardIfEmpty": false
+        },
+        {
+          "extract": "UnitPrice",
+          "generate": "custrecord_rm_op_unitpricesf",
+          "internalId": false
+        },
+        {
+          "extract": "Vessel_Name_in_Address__c",
+          "generate": "custrecord_rm_op_vesselnameaddress",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__QuotedListPrice__c",
+          "generate": "custrecord_rm_op_quotedlistprice",
+          "internalId": false
+        },
+        {
+          "extract": "Product2.celigo_sfnsio__NetSuite_Id__c",
+          "generate": "custrecord_rm_op_productnsid",
+          "internalId": false
+        },
+        {
+          "extract": "Required_By_Order_Product_Number__c",
+          "generate": "custrecord_rm_op_requiredby",
+          "internalId": false
+        },
+        {
+          "extract": "Bundle_Template__c",
+          "generate": "custrecord_rm_op_bundletemp",
+          "internalId": false
+        },
+        {
+          "generate": "custrecord_rm_op_vesselid",
+          "immutable": false,
+          "lookupName": "_getvesselid",
+          "internalId": false,
+          "discardIfEmpty": true
+        },
+        {
+          "generate": "custrecord_rm_op_vessel",
+          "immutable": false,
+          "lookupName": "_getvesselname",
+          "internalId": false,
+          "discardIfEmpty": true
+        },
+        {
+          "extract": "End_Customer_Account__r.Account_Name__c",
+          "generate": "custrecord_rm_op_endcustomeraccount",
+          "internalId": false
+        },
+        {
+          "extract": "End_Customer_Account__r.celigo_sfnsio__NetSuite_Id__c",
+          "generate": "custrecord_rm_op_endcustomernsid",
+          "internalId": true
+        },
+        {
+          "extract": "Billing_Account__r.celigo_sfnsio__NetSuite_Id__c",
+          "generate": "custrecord_rm_op_billingaccountnsid",
+          "internalId": true
+        },
+        {
+          "extract": "Revised_Order_Product_Formula__c",
+          "generate": "custrecord_revised_order_product_number",
+          "internalId": false
+        },
+        {
+          "extract": "_PARENT.NetsuiteId",
+          "generate": "custrecord_ns_id",
+          "internalId": false
+        },
+        {
+          "extract": "_PARENT.isTerminated__c",
+          "generate": "custrecord_isterminated",
+          "internalId": false
+        },
+        {
+          "extract": "Quantity_Type_NS__c",
+          "generate": "custrecordqtytype",
+          "internalId": false
+        },
+        {
+          "extract": "PO_Number__c",
+          "generate": "custrecord_rm_op_ponumber",
+          "internalId": false
+        },
+        {
+          "extract": "SBQQ__BillingFrequency__c",
+          "generate": "custrecord_rm_op_billingfreqnslist",
+          "immutable": false,
+          "lookupName": "billingFrequency",
+          "internalId": true,
+          "discardIfEmpty": false
+        },
+        {
+          "extract": "isAmended",
+          "generate": "custrecord_is_amended",
+          "internalId": false
+        }
+      ],
+      "lists": []
+    }
+  },
+  "filter": {
+    "type": "expression",
+    "expression": {
+      "version": "1",
+      "rules": [
+        "notempty",
+        [
+          "string",
+          [
+            "extract",
+            "_PARENT.NetsuiteId"
+          ]
+        ]
+      ]
+    },
+    "rules": [
+      "notempty",
+      [
+        "string",
+        [
+          "extract",
+          "_PARENT.NetsuiteId"
+        ]
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "NetSuiteDistributedImport"
+}
